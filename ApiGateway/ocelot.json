@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    //Baker
+    {
+      "UpstreamPathTemplate": "/api/Bakery",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7098
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Bakery"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Bakery/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7098
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Bakery/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Cake",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Cake"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Cake/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Cake/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7192"
+  }
+}
